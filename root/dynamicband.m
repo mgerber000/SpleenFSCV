@@ -29,7 +29,12 @@ if isempty(p1) || isempty(p2) || isempty(mxloc)
     bands{1,1} = NaN;
     bands{1,2} = NaN;
 else
+<<<<<<< HEAD
     bands = [p1,p2,p3];
+=======
+    bands{1,1} = p1:p2;
+    bands{1,2} = p2:p3;
+>>>>>>> 6bdb159a1ab162fedc9fd3f11bd7af14af5d5c3f
 end
 
 % minpeakprom = 0;

@@ -23,9 +23,15 @@ function [I,V] = readFCSV(fname,fdir,smpV)
         end
         current{i,1} = ii;
     end
+<<<<<<< HEAD
     I = zeros(size(current{1,1},1),size(current{1,1},2)+5,size(current,1));
     for i = 1:size(current,1)
         I(:,:,i) = [current{i,1},zeros(size(current{i,1},1),5)*NaN];
+=======
+    I = zeros(size(current{1,1},1),size(current{1,1},2),size(current,1));
+    for i = 1:size(current,1)
+        I(:,:,i) = current{i,1};
+>>>>>>> 6bdb159a1ab162fedc9fd3f11bd7af14af5d5c3f
     end
 
     V = table2array(data(:,1)); % voltage values (same for every file)
